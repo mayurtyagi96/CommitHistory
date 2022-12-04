@@ -9,6 +9,7 @@ import UIKit
 
 class CommitTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -16,26 +17,37 @@ class CommitTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        
+        setupCornerAndShadow()
 
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+//MARK:- Setting values on UI
     func populateData(title: String, imageUrl: String, name: String, date: String){
-        titleLabel.text = title
-        nameLabel.text = name
-        createdDateLabel.text = date
+        titleLabel.text = "Message:- \(title)"
+        nameLabel.text = "\(name)"
+        createdDateLabel.text = " Committed On:- \(date.toDate())  "
         if let url = URL(string: imageUrl){
             if let data = try? Data(contentsOf: url ){
                 userImageView.image = UIImage(data: data)
             }
-
         }        
     }
+    
+// MARK:- Setup Corner Radius and Shadow
+    func setupCornerAndShadow(){
+        self.stackView.layer.cornerRadius = 5
+        self.stackView.layer.masksToBounds = false
+        self.stackView.layer.shadowOffset = CGSizeMake(0, 0)
+        self.stackView.layer.shadowColor = UIColor.black.cgColor
+        self.stackView.layer.shadowOpacity = 0.4
+        self.stackView.layer.shadowRadius = 2
+        userImageView.layer.cornerRadius = 25
+    }
+    
+    
+
 
 }
+
+

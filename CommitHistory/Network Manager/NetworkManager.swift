@@ -7,9 +7,8 @@
 
 import Foundation
 class NetworkManager{
-    
-    
-    
+
+//MARK:- API Call to get the data
     func apiCall(completion: @escaping(_ model: CommitModel?, _ isError: Bool) -> Void){
     
         let url = URL(string: "https://api.github.com/repos/mayurtyagi96/CommitHistory/commits")
@@ -25,9 +24,6 @@ class NetworkManager{
                return print(error.localizedDescription)
             }
             if let data = data{
-                let newData = String(data: data, encoding: .utf8)
-                print(newData)
-                
             let decoder = JSONDecoder()
                 do{
                     let myModel = try decoder.decode(CommitModel.self, from: data)

@@ -46,7 +46,6 @@
 		6A855A73293CBB3F003EA7D6 = {
 			isa = PBXGroup;
 			children = (
-				6A057A38293CBF89008E44F6 /* CommitModel.swift */,
 				6A855A7E293CBB40003EA7D6 /* CommitHistory */,
 				6A855A7D293CBB40003EA7D6 /* Products */,
 			);
@@ -66,12 +65,13 @@
 				6A886A8A293CBCA700060E49 /* Network Manager */,
 				6A855A7F293CBB40003EA7D6 /* AppDelegate.swift */,
 				6A855A81293CBB40003EA7D6 /* SceneDelegate.swift */,
+				6A057A3A293CC63C008E44F6 /* CommitTableViewCell.swift */,
+				6A057A38293CBF89008E44F6 /* CommitModel.swift */,
 				6A855A83293CBB40003EA7D6 /* ViewController.swift */,
 				6A855A85293CBB40003EA7D6 /* Main.storyboard */,
 				6A855A88293CBB42003EA7D6 /* Assets.xcassets */,
 				6A855A8A293CBB42003EA7D6 /* LaunchScreen.storyboard */,
 				6A855A8D293CBB42003EA7D6 /* Info.plist */,
-				6A057A3A293CC63C008E44F6 /* CommitTableViewCell.swift */,
 			);
 			path = CommitHistory;
 			sourceTree = "<group>";

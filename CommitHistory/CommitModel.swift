@@ -97,3 +97,5 @@ struct Verification: Codable {
 }
 
 typealias CommitModel = [CommitModelElement]
+
+
