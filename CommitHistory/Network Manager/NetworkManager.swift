@@ -7,16 +7,12 @@
 
 import Foundation
 class NetworkManager{
-    func getAllCommits(){
-    let url = "https://api.github.com/repos/mayurtyagi96/GitCommitInfo/commits"
-    }
+    
     
     
     func apiCall(completion: @escaping(_ model: CommitModel?, _ isError: Bool) -> Void){
-        
-        
-        
-        let url = URL(string: "https://api.github.com/repos/mayurtyagi96/GitCommitInfo/commits")
+    
+        let url = URL(string: "https://api.github.com/repos/mayurtyagi96/CommitHistory/commits")
         var urlRequest = URLRequest(url: url!)
         urlRequest.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
         urlRequest.httpMethod = "GET"
